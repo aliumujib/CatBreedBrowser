@@ -21,9 +21,15 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
+    fun provideLoggingInterceptor(buildConfiguration: BuildConfiguration): HttpLoggingInterceptor {
         return HttpLoggingInterceptor()
-            .setLevel(HttpLoggingInterceptor.Level.BODY)
+            .apply {
+                if (buildConfiguration.debug) {
+                    setLevel(HttpLoggingInterceptor.Level.BODY)
+                } else {
+                    setLevel(HttpLoggingInterceptor.Level.NONE)
+                }
+            }
     }
 
     @Provides
@@ -55,7 +61,10 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient, buildConfiguration: BuildConfiguration): Retrofit {
+    fun provideRetrofit(
+        okHttpClient: OkHttpClient,
+        buildConfiguration: BuildConfiguration
+    ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(buildConfiguration.baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
@@ -65,7 +74,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideMealDbApi(retrofit: Retrofit): CatAPIService {
+    fun provideCatApi(retrofit: Retrofit): CatAPIService {
         return retrofit.create()
     }
 }

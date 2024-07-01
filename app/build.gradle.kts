@@ -1,3 +1,5 @@
+import java.util.Properties
+
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.android.application)
@@ -10,6 +12,15 @@ plugins {
 
 apply {
     from("$rootDir/base-module.gradle")
+}
+
+
+val credentialsPropertiesFile = rootProject.file("credentials.properties")
+val credentialsProperties = Properties()
+if (credentialsPropertiesFile.exists()) {
+    credentialsProperties.load(credentialsPropertiesFile.inputStream())
+} else {
+    throw GradleException("Missing credentials.properties file.")
 }
 
 android {
@@ -29,14 +40,19 @@ android {
     }
 
     buildTypes {
-        release {
+        getByName("debug") {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            buildConfigField("String", "BASE_URL", "\"https://api.thecatapi.com/v1/\"")
+            buildConfigField("String", "CAT_API_KEY", "\"${credentialsProperties["CAT_API_KEY"]}\"")
+        }
+        getByName("release") {
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            buildConfigField("String", "BASE_URL", "\"https://api.thecatapi.com/v1/\"")
+            buildConfigField("String", "CAT_API_KEY", "\"${credentialsProperties["CAT_API_KEY"]}\"")
         }
     }
+
     compileOptions {
         sourceCompatibility = AndroidConfig.javaVersion
         targetCompatibility = AndroidConfig.javaVersion
@@ -48,6 +64,20 @@ android {
         compose = true
         buildConfig = true
     }
+
+    packaging {
+        resources {
+            excludes += setOf(
+                "META-INF/LICENSE-notice.md",
+                "META-INF/LICENSE.md",
+                "META-INF/DEPENDENCIES",
+                "META-INF/NOTICE",
+                "META-INF/NOTICE.txt",
+                "META-INF/LICENSE.txt"
+            )
+        }
+    }
+
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }

@@ -21,8 +21,8 @@ object BuildConfigModule {
             buildType = BuildConfig.BUILD_TYPE,
             versionCode = BuildConfig.VERSION_CODE,
             versionName = BuildConfig.VERSION_NAME,
-            baseUrl = "https://api.thecatapi.com/v1/",
-            apiKey = "live_WRRSUbYuEPByUfgMPRWgq3lPRWWYBLNUwmtzHr5L7FAkCPynWDM23oldD5kNQFfm"
+            baseUrl = BuildConfig.BASE_URL,
+            apiKey = BuildConfig.CAT_API_KEY
         )
     }
 

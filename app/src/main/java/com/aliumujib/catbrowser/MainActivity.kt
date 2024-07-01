@@ -92,7 +92,6 @@ class MainActivity : ComponentActivity() {
                         StandardScaffold(
                             navController = navController,
                             items = getNavItems(context = this),
-                            isLoggedIn = true,
                             showBottomBar = route in listOf(
                                 "home/${BreedsScreenDestination.route}",
                                 "favorites/${FavoritesScreenDestination.route}",

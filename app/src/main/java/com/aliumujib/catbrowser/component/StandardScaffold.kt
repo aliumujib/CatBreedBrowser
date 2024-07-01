@@ -33,14 +33,13 @@ import com.ramcosta.composedestinations.spec.NavGraphSpec
 fun StandardScaffold(
     navController: NavController,
     showBottomBar: Boolean = true,
-    isLoggedIn: Boolean,
     items: List<BottomNavItem>,
     content: @Composable (paddingValues: PaddingValues) -> Unit
 ) {
     Scaffold(
         bottomBar = {
             if (showBottomBar) {
-                val currentSelectedItem by navController.currentScreenAsState(isLoggedIn)
+                val currentSelectedItem by navController.currentScreenAsState()
 
                 NavigationBar(
                     containerColor = MaterialTheme.colorScheme.background,
@@ -107,7 +106,7 @@ fun StandardScaffold(
  */
 @Stable
 @Composable
-fun NavController.currentScreenAsState(isLoggedIn: Boolean): State<NavGraphSpec> {
+fun NavController.currentScreenAsState(): State<NavGraphSpec> {
     val selectedItem = remember { mutableStateOf(NavGraphs.home) }
 
     DisposableEffect(this) {

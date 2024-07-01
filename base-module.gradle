@@ -69,9 +69,6 @@ dependencies {
     // Gson
     implementation(libs.retrofit.converter.gson)
 
-    // Lottie
-    api(libs.lottie.compose)
-
     // Compose Paging
     implementation(libs.paging.runtime)
 
