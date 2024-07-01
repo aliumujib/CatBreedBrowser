@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_songs_bottom_sheet_add_from_local_storage">Add song from local storage</string>
+    <string name="add_songs_bottom_sheet_add_from_internet">Download song from internet</string>
+
+    <string name="add_song_from_url_dialog_title">Enter a valid download url</string>
+    <string name="add_song_from_url_dialog_input_field_hint">Enter URL</string>
+    <string name="add_song_from_url_dialog_download_action">Download</string>
+    <string name="add_song_from_url_dialog_cancel_action">Cancel</string>
+    <string name="cats_tab_title">Cat Breeds</string>
+    <string name="cats_tab_sub_title">"Explore the most beautiful Cat Breeds from allover the world "</string>
+    <string name="default_error_message">An error occurred, please retry later</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weight">Weight</string>
+    <string name="now_playing_unknown_album_title">Unknown Song</string>
+    <string name="now_playing_unknown_song_title">Unknown Song</string>
+    <string name="searchbar_place_holder_title">Search %1$s</string>
+
+    <string name="temperament">Temperament: %1$s</string>
+    <string name="origin">Origin: %1$s</string>
+    <string name="description">Description</string>
+    <string name="life_span">Life Span: %1$s</string>
+    <string name="lap">Lap: %1$d</string>
+    <string name="alt_names">Alternate Names: %1$s</string>
+</resources>
