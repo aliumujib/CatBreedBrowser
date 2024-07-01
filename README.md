@@ -75,6 +75,16 @@ This application uses the libraries below.
 | Room               | https://developer.android.com/training/data-storage/room?hl=ja |
 | Retrofit           | https://square.github.io/retrofit/                             |  
 
+## 📚How to Compile
+To compile:
+- Obtain an API key from https://thecatapi.com/
+- Create credentials.properties file in the root project directory
+- Add the API key this format to the credentials.properties file
+```properties
+CAT_API_KEY=your_actual_api_key
+```
+- Run with Android Studio Android Studio Jellyfish | 2023.3.1 Patch 1 or later
+
 ## 💡License
 
 ```
