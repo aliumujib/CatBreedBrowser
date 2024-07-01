@@ -68,7 +68,7 @@ This application uses the libraries below.
 
 | Name               | Link                                                           |
 |--------------------|----------------------------------------------------------------|
-| Dagger             | https://insert-koin.io                                         |
+| Dagger             | https://dagger.dev/hilt/                                       |
 | Jetpack Compose    | https://developer.android.com/jetpack/compose                  |
 | Navigation Compose | https://developer.android.com/jetpack/compose/navigation       |
 | Coil               | https://coil-kt.github.io/coil/                                |
