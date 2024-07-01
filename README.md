@@ -1,4 +1,4 @@
-# Jetpack-Compose-Orbit-MVI-Demo
+# CatBreedBrowser
 
 This repository contains a Cat Breed Library application that is implemented MVI architecture using
 Dagger, Jetpack Compose, Navigation Compose, MVI.
@@ -66,14 +66,14 @@ The application also includes shared modules to handle common functionalities an
 
 This application uses the libraries below.
 
-| Name               | Link                                                         |
-|--------------------| ------------------------------------------------------------ |
-| Dagger             | https://insert-koin.io                                       |
-| Jetpack Compose    | https://developer.android.com/jetpack/compose                |
-| Navigation Compose | https://developer.android.com/jetpack/compose/navigation     |
-| Coil               | https://coil-kt.github.io/coil/                              |
+| Name               | Link                                                           |
+|--------------------|----------------------------------------------------------------|
+| Dagger             | https://insert-koin.io                                         |
+| Jetpack Compose    | https://developer.android.com/jetpack/compose                  |
+| Navigation Compose | https://developer.android.com/jetpack/compose/navigation       |
+| Coil               | https://coil-kt.github.io/coil/                                |
 | Room               | https://developer.android.com/training/data-storage/room?hl=ja |
-| Retrofit           | https://github.com/Biuni/PokemonGO-Pokedex                   |
+| Retrofit           | https://square.github.io/retrofit/                             |  
 
 ## 💡License
 
@@ -98,4 +98,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-# CatBreedBrowser
