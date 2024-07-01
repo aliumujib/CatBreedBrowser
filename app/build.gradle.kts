@@ -19,8 +19,6 @@ val credentialsPropertiesFile = rootProject.file("credentials.properties")
 val credentialsProperties = Properties()
 if (credentialsPropertiesFile.exists()) {
     credentialsProperties.load(credentialsPropertiesFile.inputStream())
-} else {
-    throw GradleException("Missing credentials.properties file.")
 }
 
 android {
