@@ -35,11 +35,11 @@
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/breeds" />
             <option value="$PROJECT_DIR$/feature/breeds/all-breeds" />
+            <option value="$PROJECT_DIR$/feature/breeds/breed-details" />
             <option value="$PROJECT_DIR$/feature/breeds/breeds-data" />
             <option value="$PROJECT_DIR$/feature/breeds/breeds-domain" />
             <option value="$PROJECT_DIR$/feature/breeds/common" />
             <option value="$PROJECT_DIR$/feature/breeds/favorite-breeds" />
-            <option value="$PROJECT_DIR$/feature/breeds/now-playing" />
             <option value="$PROJECT_DIR$/feature/settings" />
           </set>
         </option>
